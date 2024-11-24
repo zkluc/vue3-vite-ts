@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + Vue + TS</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts">
+    var lowestCommonAncestor = function (root, p, q) {
+      if (root == null || root == p || root == q) return root;
+      let left = lowestCommonAncestor(root.left, p, q);
+      let right = lowestCommonAncestor(root.right, p, q);
+      if (left == null) return right;
+      if (right == null) return left;
+      return root;
+    };
+  </script>
+</body>
+
+</html>
